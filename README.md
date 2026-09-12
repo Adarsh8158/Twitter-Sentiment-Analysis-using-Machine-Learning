@@ -5,11 +5,9 @@ A Natural Language Processing (NLP) and Machine Learning project that classifies
 The project preprocesses Twitter text, converts the text into numerical features using TF-IDF, trains a Logistic Regression model, evaluates its performance, and predicts sentiment for custom tweets.
 
 ## 📌 Project Overview
-
 Sentiment Analysis is an NLP task used to identify the sentiment expressed in text.
 
 In this project, Twitter data is classified into four sentiment categories:
-
 - Positive
 - Negative
 - Neutral
@@ -18,26 +16,20 @@ In this project, Twitter data is classified into four sentiment categories:
 The model is trained using the provided training dataset and evaluated using a separate validation dataset.
 
 ## 📊 Dataset
-
 **Dataset:** Twitter Entity Sentiment Analysis
-
-**Source:** Kaggle  
-https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
+**Source:** [Kaggle](https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis)
 
 The dataset contains:
-
 - ID
 - Entity
 - Sentiment
 - Tweet
 
 Two files are used in this project:
-
 - `twitter_training.csv`
 - `twitter_validation.csv`
 
 ## 🎯 Objectives
-
 - Load and inspect Twitter sentiment data
 - Handle missing values and duplicate records
 - Analyze sentiment distribution
@@ -50,7 +42,6 @@ Two files are used in this project:
 - Save validation predictions to a CSV file
 
 ## 🛠️ Technologies Used
-
 - Python
 - Pandas
 - Regular Expressions
@@ -60,8 +51,7 @@ Two files are used in this project:
 - Logistic Regression
 
 ## 🔄 Project Workflow
-
-```text
+```
 Twitter Dataset
        ↓
 Load Training & Validation Data
@@ -90,19 +80,15 @@ Save Predictions
 ```
 
 ## 🧹 Data Cleaning
-
 The project performs the following cleaning steps:
-
 - Removes missing tweets and sentiment values
 - Removes duplicate records
 - Removes empty cleaned tweets
 
 ## ✨ Text Preprocessing
-
 The tweet text is cleaned using a custom `clean_text()` function.
 
 The preprocessing includes:
-
 - Converting text to lowercase
 - Removing URLs
 - Removing user mentions
@@ -112,8 +98,7 @@ The preprocessing includes:
 - Removing extra spaces
 
 Example:
-
-```text
+```
 Original:
 @user I LOVE this product!!! #Amazing
 
@@ -122,10 +107,7 @@ i love this product amazing
 ```
 
 ## 🔢 TF-IDF Vectorization
-
 TF-IDF (Term Frequency-Inverse Document Frequency) is used to convert tweet text into numerical features.
-
-The project uses:
 
 ```python
 TfidfVectorizer(
@@ -139,10 +121,7 @@ TfidfVectorizer(
 ## 🤖 Machine Learning Model
 
 ### Logistic Regression
-
-Logistic Regression is used as the classification algorithm for predicting the sentiment of tweets.
-
-The model is trained using the TF-IDF features generated from the training dataset.
+Logistic Regression is used as the classification algorithm for predicting the sentiment of tweets. The model is trained using the TF-IDF features generated from the training dataset.
 
 ```python
 LogisticRegression(
@@ -150,38 +129,33 @@ LogisticRegression(
 )
 ```
 
-## 📈 Model Evaluation
+## 📈 Results
+| Metric | Score |
+|---|---|
+| Accuracy | *(add after running)* |
+| Macro F1-Score | *(add after running)* |
+| Weighted F1-Score | *(add after running)* |
 
-The model is evaluated on the validation dataset using:
-
-- Accuracy
-- Precision
-- Recall
-- F1-Score
-- Confusion Matrix
-
-The classification report provides performance metrics for each sentiment class.
+The classification report provides per-class precision, recall, and F1-score for Positive, Negative, Neutral, and Irrelevant categories.
 
 ## 📊 Visualizations
 
 ### Sentiment Distribution
-
 ![Sentiment Distribution](sentiment_distribution.png)
 
 ### Confusion Matrix
-
 ![Confusion Matrix](confusion_matrix.png)
 
+## 💡 Key Insights
+*(add 2-3 bullet points once you see the output — e.g. which sentiment class is hardest to predict, how balanced the dataset is)*
+
 ## 🧪 Custom Sentiment Prediction
-
 The project includes a custom prediction function that accepts new text and predicts:
-
 - Sentiment
 - Prediction confidence
 
 Example:
-
-```text
+```
 Tweet:
 I absolutely love this product!
 
@@ -190,57 +164,25 @@ Positive
 ```
 
 ## 💾 Output File
-
-The project saves validation predictions into:
-
-`sentiment_predictions.csv`
+The project saves validation predictions into: `sentiment_predictions.csv`
 
 The output contains:
-
 - ID
 - Entity
 - Original Tweet
 - Actual Sentiment
 - Predicted Sentiment
 
-## 📁 Project Structure
-
-```text
-Twitter-Sentiment-Analysis-using-Machine-Learning/
-│
-├── twitter_training.csv
-├── twitter_validation.csv
-├── Twitter-Sentiment-Analysis.ipynb
-├── sentiment_predictions.csv
-├── sentiment_distribution.png
-├── confusion_matrix.png
-├── README.md
-└── requirements.txt
-```
-
 ## 🚀 How to Run
-
-### 1. Install the required libraries
-
 ```bash
 pip install -r requirements.txt
 ```
-
-### 2. Keep the dataset files in the same folder
-
-```text
+Keep the dataset files in the same folder:
+```
 twitter_training.csv
 twitter_validation.csv
 ```
-
-### 3. Open the notebook
-
-Open `Twitter-Sentiment-Analysis.ipynb` using Jupyter Notebook, JupyterLab, or Google Colab.
-
-### 4. Run the notebook cells
-
-The notebook will:
-
+Open `sentiment-Analysis.ipynb` using Jupyter Notebook, JupyterLab, or Google Colab, and run all cells in order. The notebook will:
 - Load the datasets
 - Clean the data
 - Preprocess the tweets
@@ -251,10 +193,21 @@ The notebook will:
 - Make custom predictions
 - Save prediction results
 
+## 📁 Project Structure
+```
+Twitter-Sentiment-Analysis-using-Machine-Learning/
+├── twitter_training.csv
+├── twitter_validation.csv
+├── sentiment-Analysis.ipynb
+├── sentiment_predictions.csv
+├── sentiment_distribution.png
+├── confusion_matrix.png
+├── README.md
+└── requirements.txt
+```
+
 ## 📚 Key Learning Outcomes
-
 Through this project, I practiced:
-
 - Natural Language Processing basics
 - Text preprocessing
 - TF-IDF feature extraction
@@ -265,11 +218,7 @@ Through this project, I practiced:
 - Working with Twitter data
 
 ## 👨‍💻 Author
-
 **Adarsh Yadav**
 
-GitHub:  
-https://github.com/Adarsh8158
-
-LinkedIn:  
-https://www.linkedin.com/in/adarsh-yadav-49225140/
+GitHub: [github.com/Adarsh8158](https://github.com/Adarsh8158)
+LinkedIn: [linkedin.com/in/adarsh-yadav-49225140](https://www.linkedin.com/in/adarsh-yadav-49225140/)
