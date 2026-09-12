@@ -129,14 +129,28 @@ LogisticRegression(
 )
 ```
 
-## 📈 Results
-| Metric | Score |
-|---|---|
-| Accuracy | *(add after running)* |
-| Macro F1-Score | *(add after running)* |
-| Weighted F1-Score | *(add after running)* |
+## 📈 Model Results
 
-The classification report provides per-class precision, recall, and F1-score for Positive, Negative, Neutral, and Irrelevant categories.
+The Logistic Regression model achieved a **91.60% validation accuracy** on the Twitter sentiment validation dataset.
+
+### Performance Metrics
+
+| Metric | Score |
+|---|---:|
+| Accuracy | **91.60%** |
+| Macro Precision | **0.92** |
+| Macro Recall | **0.91** |
+| Macro F1-Score | **0.91** |
+| Weighted F1-Score | **0.92** |
+
+### Class-wise Performance
+
+| Sentiment | Precision | Recall | F1-Score |
+|---|---:|---:|---:|
+| Irrelevant | 0.94 | 0.86 | 0.90 |
+| Negative | 0.89 | 0.97 | 0.93 |
+| Neutral | 0.95 | 0.90 | 0.92 |
+| Positive | 0.90 | 0.92 | 0.91 |
 
 ## 📊 Visualizations
 
@@ -146,8 +160,13 @@ The classification report provides per-class precision, recall, and F1-score for
 ### Confusion Matrix
 ![Confusion Matrix](confusion_matrix.png)
 
-## 💡 Key Insights
-*(add 2-3 bullet points once you see the output — e.g. which sentiment class is hardest to predict, how balanced the dataset is)*
+## 🔍 Key Insights
+
+- The Logistic Regression model achieved **91.60% validation accuracy** using TF-IDF features.
+- The **Negative** class achieved the highest recall at **0.97**, meaning most negative tweets were correctly identified.
+- The **Neutral** class achieved the highest precision at **0.95**.
+- The model achieved a **weighted F1-score of 0.92**, showing consistent overall classification performance across the four sentiment classes.
+- The model performed well across all four sentiment categories: **Irrelevant, Negative, Neutral, and Positive**.
 
 ## 🧪 Custom Sentiment Prediction
 The project includes a custom prediction function that accepts new text and predicts:
@@ -155,12 +174,16 @@ The project includes a custom prediction function that accepts new text and pred
 - Prediction confidence
 
 Example:
-```
+
+```text
 Tweet:
 I absolutely love this product!
 
 Predicted Sentiment:
 Positive
+
+Confidence:
+68.56%
 ```
 
 ## 💾 Output File
